@@ -1,0 +1,58 @@
+package allData
+
+type Name struct {
+	ID          int64  `pb:"1"`
+	Title       string `pb:"2"`
+	
+}
+
+type CreateNameRequest struct {
+	Name Name `pb:"1"`
+}
+
+type CreateNameResponse struct {
+	ID int64 `pb:"1"`
+}
+
+type GetNameRequest struct {
+	ID int64 `pb:"1"`
+}
+
+type GetNameResponse struct {
+	Name Name `pb:"1"`
+}
+
+type UpdateNameRequest struct {
+	Name Name `pb:"1"`
+}
+
+type UpdateNameResponse struct{}
+
+type DeleteNameRequest struct {
+	ID int64 `pb:"1"`
+}
+
+type DeleteNameResponse struct{}
+
+type CompleteNameRequest struct {
+	ID int64 `pb:"1"`
+}
+
+type CompleteNameResponse struct{}
+
+
+type GetAllDataNameRequest struct{}
+
+type GetAllDataNameResponse struct{
+	Name []Name `pb:"1"`
+}
+
+
+type NameService interface {
+	CreateName(CreateNameRequest) CreateNameResponse
+	GetName(GetNameRequest) GetNameResponse
+	UpdateName(UpdateNameRequest) UpdateNameResponse
+	DeleteName(DeleteNameRequest) DeleteNameResponse
+	CompleteName(CompleteNameRequest) CompleteNameResponse
+	GetAllName(GetAllDataNameRequest) GetAllDataNameResponse
+}
