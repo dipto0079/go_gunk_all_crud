@@ -1,3 +1,3 @@
-# go_gunk_all_crud
+# Demo all go gunk new Project 
 
-# name = Apner ja name a rakta chan 
+# name = Project name

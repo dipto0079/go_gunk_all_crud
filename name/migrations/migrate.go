@@ -1,7 +1,7 @@
 package main
 
 import (
-	"blog/category/storage/postgres"
+	"free_go/name/storage/postgres"
 	"log"
 )
 
